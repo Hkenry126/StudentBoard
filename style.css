@@ -1,24 +1,19 @@
 body {
   font-family: "Noto Sans TC", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #fafafa;
+  background-color: #f9f9f9;
+  text-align: center;
   margin: 0;
   padding: 20px;
-}
-
-h1 {
-  margin-bottom: 20px;
 }
 
 .timetable {
   display: grid;
   grid-template-columns: 80px repeat(5, 1fr);
   grid-auto-rows: 60px;
-  border: 1px solid #ccc;
   width: 90%;
   max-width: 900px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
   background: white;
 }
 
@@ -36,15 +31,42 @@ h1 {
 }
 
 .time {
-  background-color: #f9f9f9;
+  background-color: #fafafa;
   font-weight: bold;
 }
 
 .cell {
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: 0.2s;
 }
 
 .cell:hover {
   background-color: #e9f5ff;
+}
+
+.course-list {
+  width: 90%;
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  background-color: #f3f3f3;
+}
+
+dialog {
+  border: none;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
