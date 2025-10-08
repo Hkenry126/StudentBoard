@@ -3,12 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>個人課表</title>
+  <title>我的課表</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>我的課表</h1>
   <div id="timetable" class="timetable"></div>
+
+  <div class="course-list">
+    <h2>課程清單</h2>
+    <table id="courseTable">
+      <thead>
+        <tr>
+          <th>課程名稱</th>
+          <th>學分</th>
+          <th>類型</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- 新增課程對話框 -->
+  <dialog id="courseDialog">
+    <form method="dialog" id="courseForm">
+      <h3>新增課程</h3>
+      <label>課程名稱：<input type="text" id="courseName" required></label><br>
+      <label>上幾節課：
+        <select id="duration">
+          <option value="1">1</option>
+          <option value="2" selected>2</option>
+          <option value="3">3</option>
+        </select>
+      </label><br>
+      <label>學分數：<input type="number" id="credit" min="1" max="6" value="2"></label><br>
+      <label>課程類型：
+        <select id="type">
+          <option value="必修">必修</option>
+          <option value="選修">選修</option>
+          <option value="必選修">必選修</option>
+        </select>
+      </label><br>
+      <menu>
+        <button value="cancel">取消</button>
+        <button value="confirm">確定</button>
+      </menu>
+    </form>
+  </dialog>
 
   <script src="script.js"></script>
 </body>
